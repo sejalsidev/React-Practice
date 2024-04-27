@@ -27,87 +27,91 @@ import Contact from './component/Contact';
 import Company from './component/Company';
 import Others from './component/Others';
 import Protected from './component/Protected';
-
+import HomeContainer from './Containers/HomeContainer';
 
 
 
 function App() {
-  const [data,setdata]=useState([]);
-  useEffect(()=> {
-    fetch('https://fakestoreapi.com/products').then((result)=>{
-      result.json().then((resp)=>{
-        // console.log("result",resp)
-        setdata(resp);
-      })
-})
-},[])
-console.warn(data)
-  
-  //  const [data,setData]=useState(0);
-  //  function updateData(){
-  //      setData(data+1)
-  //  }
-  //  function getData(){
-  //     alert("get a data")
-  //  }
-  return (
-    <div className="App">
-      <h1>Get Data</h1>
-      <Table stripped bordered hover size="sm" variant="dark">
-        <thead>
-          <tr>
-            <td>Id</td>
-            <td>Title</td>
-            <td>Price</td>
-            <td>Description</td>
-            </tr></thead><tbody>
-            {
-              data.map((item)=>
-            <tr>
-              <td>{item.id}</td>
-              <td>{item.title}</td>
-              <td>{item.price}</td>
-              <td>{item.description}</td>
-            </tr>
-              )
-            }
-          </tbody>
-      </Table>
-       {/* <h1>{data}</h1>
-      <button onClick={updateData}>Update Data</button>
-      <Test/>
-      <User/>
-      <Student name={"harshiv"} email="harshiv@gmail.com"/>
-      <Profile/>
-      <Login/>
-      <Users/>
-      <Members data={getData}/>
-      <Tester/> */}
-      {/* <Table1/> */}
-      {/* <Employee1/> */}
-      {/* <Stud/> */}
+  return(
+        <div>
+            <HomeContainer/>
+        </div>
+  )
+}
+// /*   const [data,setdata]=useState([]);
+//   useEffect(()=> {
+//     fetch('https://fakestoreapi.com/products').then((result)=>{
+//       result.json().then((resp)=>{
+//         // console.log("result",resp)
+//         setdata(resp);
+//       })
+// })
+// },[])
+// console.warn(data)
+//    */
+//   //  const [data,setData]=useState(0);
+//   //  function updateData(){
+//   //      setData(data+1)
+//   //  }
+//   //  function getData(){
+//   //     alert("get a data")
+//   //  }
+//    /*  <div className="App">
+//       <h1>Get Data</h1>
+//       <Table stripped bordered hover size="sm" variant="dark">
+//         <thead>
+//           <tr>
+//             <td>Id</td>
+//             <td>Title</td>
+//             <td>Price</td>
+//             <td>Description</td>
+//             </tr></thead><tbody>
+//             {
+//               data.map((item)=>
+//             <tr>
+//               <td>{item.id}</td>
+//               <td>{item.title}</td>
+//               <td>{item.price}</td>
+//               <td>{item.description}</td>
+//             </tr>
+//               )
+//             }
+//           </tbody>
+//       </Table> */
+//     /* <h1>{data}</h1>
+//       <button onClick={updateData}>Update Data</button>
+//       <Test/>
+//       <User/>
+//       <Student name={"harshiv"} email="harshiv@gmail.com"/>
+//       <Profile/>
+//       <Login/>
+//       <Users/>
+//       <Members data={getData}/>
+//       <Tester/> */}
+//       {/* <Table1/> */}
+//       {/* <Employee1/> */}
+//       {/* <Stud/> */}
      
-    {/*   <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Protected Component={Home}/>}/>
-        <Route path="/about" element={<Protected Component={About}/>}/>
-        <Route path="/*" element={<Navigate to="/"/>}/>
-        <Route path="/emp/:name" element={<Emp/>}/>
-        <Route path="/filter" element={<Filter/>}/>
-        <Route path="/contact" element={<Protected Component={Contact}/>}/>
-        <Route path="/cannel" element={<Cannel/>}/>
-        <Route path="/company" element={<Company/>}/>
-        <Route path="/others" element={<Others/>}/>
-        <Route path="/Login" element={<Login/>}/>
+//     {/*   <BrowserRouter>
+//       <Navbar/>
+//       <Routes>
+//         <Route path="/" element={<Protected Component={Home}/>}/>
+//         <Route path="/about" element={<Protected Component={About}/>}/>
+//         <Route path="/*" element={<Navigate to="/"/>}/>
+//         <Route path="/emp/:name" element={<Emp/>}/>
+//         <Route path="/filter" element={<Filter/>}/>
+//         <Route path="/contact" element={<Protected Component={Contact}/>}/>
+//         <Route path="/cannel" element={<Cannel/>}/>
+//         <Route path="/company" element={<Company/>}/>
+//         <Route path="/others" element={<Others/>}/>
+//         <Route path="/Login" element={<Login/>}/>
         
 
-      </Routes>
-      </BrowserRouter>
-   */}
-    </div>
+//       </Routes>
+//       </BrowserRouter>
+//    */}
+//   /*   </div>
     
-  );
-}
+//   ); */
 
 export default App;
